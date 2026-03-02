@@ -1,0 +1,23 @@
+# Bridge Defect Detector — Python dependencies
+# Install: pip install -r requirements.txt
+
+# ── Core framework ────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+
+# ── AI / LangGraph ────────────────────────────────────────────────────────────
+langgraph>=0.2.0
+google-genai>=1.0.0
+
+# ── Image processing ──────────────────────────────────────────────────────────
+Pillow>=10.0.0
+
+# ── Report generation ─────────────────────────────────────────────────────────
+reportlab>=4.0.0
+openpyxl>=3.1.0
+
+# ── Data ──────────────────────────────────────────────────────────────────────
+pandas>=2.0.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+pydantic>=2.0.0
+python-dotenv>=1.0.0

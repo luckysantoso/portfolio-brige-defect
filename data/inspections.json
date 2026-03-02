@@ -1,0 +1,17 @@
+[
+  {
+    "inspection_id": "INS-20260302-E1031A20",
+    "prefecture_id": "JP-TYO-001",
+    "image_filename": "image011_hwswkl.webp",
+    "damage_type": "Spalling",
+    "severity_rank": "B",
+    "confidence": 0.95,
+    "notes": "Significant spalling is observed on the soffit of the concrete deck/girders in two distinct locations. Multiple corroded reinforcement bars are exposed, indicating ongoing deterioration due to rebar corrosion and loss of concrete cover.",
+    "route": "normal",
+    "human_correction": null,
+    "pdf_path": "C:\\Users\\lucky\\OneDrive\\Documents\\Kuliah\\SEMESTER 8\\portfolio_defect_brige\\reports\\INS-20260302-E1031A20.pdf",
+    "report_timestamp": "2026-03-02T15:40:21.450170",
+    "alert_sent": false,
+    "alert_message": null
+  }
+]
