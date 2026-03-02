@@ -12,15 +12,15 @@ Built as a portfolio project demonstrating AI Engineering with LLM orchestration
 Upload Image
     │
     ▼
-[image_analyzer]  ←── Gemini 1.5 Flash (Google AI Studio)
+[image_analyzer]  ←── Gemini (Google AI Studio)
     │
     ▼
 [rule_validator]  ←── Deterministic Python rules
     │
     ├── confidence < 0.70 OR unknown type ──→ [human_review]  →  Streamlit HIL Form
     │
-    ├── severity == A ──────────────────────→ [email_alert]   →  [report_generator]
-    │                                                                      │
+    ├── severity == A ──────────────────────→ [email_alert]   →[report_generator]
+
     └── severity B / C / D ──────────────────────────────────→ [report_generator]
                                                                            │
                                                                       PDF + JSON log
@@ -31,7 +31,7 @@ Upload Image
 | Layer         | Technology                                        |
 | ------------- | ------------------------------------------------- |
 | Orchestration | **LangGraph** (StateGraph)                        |
-| Vision Engine | **Gemini 1.5 Flash** (Google AI Studio)           |
+| Vision Engine | **Gemini**                                        |
 | UI            | **Streamlit** (4-page SPA)                        |
 | PDF Reporting | **ReportLab** (pixel-precise, bureaucratic style) |
 | Data Storage  | JSON flat-file (`data/inspections.json`)          |
@@ -161,22 +161,6 @@ Generates a **pixel-precise PDF** using ReportLab in Japanese bureaucratic form 
 3. Select repo → `app.py` as entry point
 4. Add `GEMINI_API_KEY` in **Secrets** (Advanced settings)
 5. Deploy ✅
-
-## 📝 Data & Future Work (Phase 2)
-
-This prototype collects labelled inspection data (`data/inspections.json`) which forms the foundation for:
-
-**Local Model Training with SE-SMOTE**  
-Bridge damage datasets are inherently imbalanced (Rank A cases are rare).  
-The data collected here is designed to be used with **SE-SMOTE** (Structural Embedding SMOTE), a technique for oversampling minority-class samples using structural feature embeddings, enabling training of a lightweight local classifier as a complement to the Gemini API.
-
-Steps planned:
-
-1. Export labelled data → `inspections_export.csv`
-2. Extract image embeddings (e.g., CLIP / EfficientNet)
-3. Apply SE-SMOTE to oversample rare severity classes (A, B)
-4. Train a local CNN/ViT classifier
-5. Use local model as a fast pre-filter; escalate to Gemini for borderline cases
 
 ## 🔑 Severity Rank Reference
 
