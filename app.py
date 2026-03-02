@@ -163,7 +163,7 @@ if page == "🔍 Inspect":
                     "alert_message":   None,
                 }
 
-                with st.spinner("🔍 Analysing with Gemini 1.5 Flash …"):
+                with st.spinner("🔍 Analysing with Gemini…"):
                     try:
                         graph = get_graph()
                         result = graph.invoke(initial_state)
